@@ -1,0 +1,101 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkyCast Weather App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="weather.jpg" alt="SkyCast logo">
+      <h1>SkyCast</h1>
+    </div>
+    <p>Get the latest weather update and plan your days with confidence.</p>
+
+    <!-- Unit toggle -->
+    <div class="unit-toggle" role="group" aria-label="Temperature unit">
+      <button id="celsius-btn" type="button" aria-pressed="true">°C</button>
+      <button id="fahrenheit-btn" type="button" aria-pressed="false">°F</button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Search area -->
+    <div class="search-box" id="search-area" role="search">
+      <label for="city-input">Enter a city name to get the current weather.</label>
+      <div class="search-bar">
+        <input type="text" id="city-input" name="city" placeholder="e.g. Kumasi" autocomplete="off">
+        <button id="search-btn" type="button">Search</button>
+      </div>
+      <button id="location-btn" type="button">Use my location</button>
+    </div>
+
+    <!-- Status area -->
+    <div class="status-message" id="status-area">
+      <p id="loading" class="hidden">Fetching weather...</p>
+      <p id="error" class="hidden" role="alert"></p>
+    </div>
+
+    <!-- Weather card -->
+    <div class="weather-card" id="weather-card">
+
+      <div class="card-top">
+        <h2 id="city-name">Kumasi, Ghana</h2>
+        <p id="date">Tuesday, 03 November 2026</p>
+      </div>
+
+      <div class="main-weather">
+    <span id="weather-icon" role="img" aria-label="Weather icon">⛅</span>
+
+    <p id="temperature">--°C</p>
+
+    <p id="condition">Partly cloudy</p>
+</div>
+
+      <div class="weather-details">
+        <div class="detail humidity">
+          <img src="humidity.png" alt="Humidity icon">
+          <p>Humidity</p>
+          <span id="humidity">75%</span>
+        </div>
+        <div class="detail wind">
+          <img src="wind.png" alt="Wind icon">
+          <p>Wind</p>
+          <span id="wind">12 km/h</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Forecast section -->
+    <div class="forecast" id="forecast">
+      <h2>7-Day Forecast</h2>
+      <div id="forecast-container">
+        <!-- Sample card for styling. Delete once JavaScript builds the cards. -->
+        <div class="forecast-card">
+          <p class="forecast-day">Wed</p>
+          <span class="forecast-icon">☀️</span>
+          <p>
+            <span class="forecast-high">30°</span>
+            <span class="forecast-low">22°</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>Weather data by <a href="https://open-meteo.com/">Open-Meteo</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>.
+```
+
